@@ -1,0 +1,88 @@
+<!-- diagnosis.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnosis Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      width: 80%;
+      max-width: 600px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .home-btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .home-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Diagnosis Results</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Suspected Disease</th>
+          <th>Doctor Recommended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(function(item) { %>
+          <% for (var key in item) { %>
+            <tr>
+              <td><%= key %></td>
+              <td><%= item[key] %></td>
+            </tr>
+          <% } %>
+        <% }) %>
+      </tbody>
+    </table>
+    <div class="btn-container">
+      <form action="/" method="get">
+        <button type="submit" class="home-btn">Home</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
