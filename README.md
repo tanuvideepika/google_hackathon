@@ -2,7 +2,7 @@ We need to follow the steps to generate the required api endpoint:-
 
 1) First we need to clone the repository
 2) 'python' and 'docker desktop' needs to be installed in the local system
-3) In the terminal cd to this "DOCTOR-RECOMMENDATION-SYSTEM" directory
+3) In the terminal cd to the root directory
 4) Run the following commands:
 
    1)     sudo docker build -t backend:latest -f Dockerfile .
