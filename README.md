@@ -5,11 +5,11 @@ We need to follow the steps to generate the required api endpoint:-
 3) In the terminal cd to this "DOCTOR-RECOMMENDATION-SYSTEM" directory
 4) Run the following commands:
 
-   5)     sudo docker build -t backend:latest -f Dockerfile .
+   1)     sudo docker build -t backend:latest -f Dockerfile .
 
    This can take some time to setup
 
-   6)     sudo docker run -p 8000:8000  backend:latest  
+   2)     sudo docker run -p 8000:8000  backend:latest  
 
 Skip 'sudo' word from the command if authorization is given for all users in docker
 
@@ -17,8 +17,8 @@ The backend is ready now moving onto the front end set up!
 1) In another terminal cd to the 'front_google' directory
 2) run the commands
 
-    3)     npm i
-    4)     node index.js
+    1)     npm i
+    2)     node index.js
 
 5) go to "http://localhost:3000/"
 6) Enter your symptoms and click submit
